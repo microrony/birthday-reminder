@@ -1,8 +1,13 @@
-import './App.css';
+import './index.css';
 
 function App() {
   return (
-    <h1>Hello world</h1>
+    <main>
+      <div className="container">
+      <h3>0 birthdays today</h3>
+      <button className='btn'>Clear All</button>
+      </div>
+    </main>
   );
 }
 
