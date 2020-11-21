@@ -2,7 +2,7 @@ import './css/style.css';
 
 function App() {
   return (
-    <main className='midle' >
+    <main>
       <div className="container">
         <div className="card">
       <h3>0 birthdays today</h3>
