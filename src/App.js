@@ -5,9 +5,9 @@ function App() {
     <main>
       <div className="container">
         <div className="card">
-      <h3>0 birthdays today</h3>
-      <button className='btn btn-primary'>Clear All</button>
-      </div>
+          <h3>0 birthdays today</h3>
+          <button className="btn btn-primary">Clear All</button>
+        </div>
       </div>
     </main>
   );
