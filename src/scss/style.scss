@@ -1,7 +1,63 @@
-@import 'config';
-@import 'main';
+// Color Variables
+$primary-color: #F28AB2;
+$secondary-color: #1c3fa8;
+$dark-color: #002240;
+$light-color: #f4f4f4;
+$active-color: #e63946;
+$success-color: #5cb85c;
+$error-color: #d9534f;
+$white-color: #fff;
+$black-color: #000;
 
+// Function for set the text color vase on background color
 
+@function set-text-color($color) {
+  @if (lightness($color) > 70) {
+    @return $dark-color;
+  } @else {
+    @return $white-color;
+  }
+}
 
-@import 'utilities';
-@import 'responsive';
+// Mixin for use the function
+
+@mixin set-background($color) {
+  background-color: $color;
+  color: set-text-color($color);
+}
+
+@mixin set-transform($value) {
+  transform: $value;
+  -webkit-transform: $value;
+  -moz-transform: $value;
+  -ms-transform: $value;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $primary-color;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.container {
+  width: 400px;
+  margin: auto;
+  overflow: hidden;
+  height: 100%;
+
+  .card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 5px;
+  }
+}
+
